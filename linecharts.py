@@ -16,7 +16,17 @@ plt.figure(figsize=(16, 6))
 plt.title("Daily global streams of popular songs in 2017-2018")
 
 # Line chart showing daily global screen of each song
-sns.lineplot(data=filedata)
+#sns.lineplot(data=filedata)
+
+# We can also plot a subset of the columns
+# Line chart showing daily global streams of a single column
+sns.lineplot(data=filedata['Shape of You'], label="Shape of You")
+
+# Line chart showing daily global streams of a single column
+sns.lineplot(data=filedata['Despacito'], label="Despacito")
+
+# Add a label for the horizontal axis
+plt.xlabel("Date")
 
 # Displaying the figure
 plt.show()
