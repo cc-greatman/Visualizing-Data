@@ -13,6 +13,11 @@ plt.figure(figsize=(16, 8))
 
 # x = the horizontal x-axis
 # y = the vertical y-axis
-sns.scatterplot(x=filedata['bmi'], y=filedata['charges'])
+#sns.scatterplot(x=filedata['bmi'], y=filedata['charges'])
+
+# To double-check the strength of this relationship, 
+# we might to add a regression line
+sns.regplot(x=filedata['bmi'], y=filedata['charges'])
+
 plt.title("BMI against charges in scatter plot graphs")
 plt.show()
