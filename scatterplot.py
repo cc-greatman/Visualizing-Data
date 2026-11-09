@@ -1,9 +1,4 @@
-import kagglehub
-import os
-import pandas as pd
-pd.plotting.register_matplotlib_converters()
-import matplotlib.pyplot as plt
-import seaborn as sns
+from utils import *
 
 filelink = kagglehub.dataset_download("alexisbcook/data-for-datavis")
 filepath = os.path.join(filelink, "insurance.csv")

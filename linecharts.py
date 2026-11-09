@@ -1,9 +1,4 @@
-import kagglehub
-import matplotlib.pyplot as plt
-import os
-import pandas as pd
-pd.plotting.register_matplotlib_converters()
-import seaborn as sns
+from utils import *
 
 filelink = kagglehub.dataset_download("alexisbcook/data-for-datavis")
 filepath = os.path.join(filelink, "spotify.csv")
