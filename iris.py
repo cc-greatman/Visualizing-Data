@@ -17,8 +17,11 @@ plt.figure(figsize=(10, 6))
 #sns.jointplot(x=filedata['Petal Length (cm)'], y=filedata['Sepal Width (cm)'], kind='kde')
 
 # Histrogram for each species(using colors to seperate/identify them)
-sns.histplot(data=filedata, x=filedata['Petal Length (cm)'], hue='Species')
+#sns.histplot(data=filedata, x=filedata['Petal Length (cm)'], hue='Species')
 
-plt.title("Histogram of Petal Lengths, by Species")
+# We can also use a KDE graph to represent the data while using colors to separate them
+sns.kdeplot(data=filedata['Petal Length (cm)'], hue='Species', fill=True)
+
+plt.title("Distribution of Petal Lengths, by Species")
 
 plt.show()
