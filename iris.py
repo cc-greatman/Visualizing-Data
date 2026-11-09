@@ -20,7 +20,7 @@ plt.figure(figsize=(10, 6))
 #sns.histplot(data=filedata, x=filedata['Petal Length (cm)'], hue='Species')
 
 # We can also use a KDE graph to represent the data while using colors to separate them
-sns.kdeplot(data=filedata['Petal Length (cm)'], hue='Species', fill=True)
+sns.kdeplot(data=filedata, x='Petal Length (cm)', hue='Species', fill=True)
 
 plt.title("Distribution of Petal Lengths, by Species")
 
